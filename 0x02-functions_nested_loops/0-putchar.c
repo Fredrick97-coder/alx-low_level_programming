@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - this function prints \"_putchar\*
+ * main - Entry point
  *
- * Description - prints \*_putchar\* always
+ * Description: prints "_putchar"
  *
- * Return - Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 
-int main()
+int main(void)
 {
 	printf("_putchar\n");
 	return (0);

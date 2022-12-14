@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define limit 10000000000
 
 /**
  * main - Entry point
@@ -14,7 +15,6 @@ int main(void)
 	unsigned long int div1 = 0, first = 1, div2 = 0, second = 2;
 	unsigned long int tempA, tempB, tempC;
 	int counter = 0;
-	long int limit = 9000000;
 
 	while (counter <= 98)
 	{

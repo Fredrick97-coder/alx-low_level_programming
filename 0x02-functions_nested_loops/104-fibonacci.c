@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /**
  * main - Entry point
  *
@@ -19,10 +18,10 @@ int main(void)
 
 	while (counter <= 98)
 	{
-		if (first + second > LARGEST || div2 > 0 || div1 > 0)
+		if (first + second > limit || div2 > 0 || div1 > 0)
 		{
-			tempA = (first + second) / Limit;
-			tempB = (first + second) % Limit;
+			tempA = (first + second) / limit;
+			tempB = (first + second) % limit;
 			tempC = div1 + div2 + tempA;
 			div1 = div2;
 			div2 = tempC;

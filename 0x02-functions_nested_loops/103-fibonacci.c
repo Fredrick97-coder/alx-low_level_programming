@@ -21,7 +21,6 @@ int main(void)
 	{
 		sum = first + second;
 		sum % 2 == 0 ? total_sum += sum : 0;
-	
 		first = second;
 		second = sum;
 	}

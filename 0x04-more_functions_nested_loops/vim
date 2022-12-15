@@ -8,13 +8,13 @@
 
 void more_numbers(void)
 {
-	int i, n, repeat, limit;
+	int line, n, repeat, limit;
 
 	n = '0';
 	repeat = 0;
 	limit = '9';
 
-	for (i = 0; i < 10; i++)
+	for (line = 0; line < 10; line++)
 	{
 		while (repeat < 2)
 		{

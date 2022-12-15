@@ -1,5 +1,5 @@
 #include "main.h"
-#include "math.h"
+#include <math.h>
 
 /**
  * power - exponents

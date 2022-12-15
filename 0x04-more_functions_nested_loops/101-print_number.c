@@ -1,5 +1,5 @@
-#include "main.h"
 #include <math.h>
+#include "main.h"
 
 /**
  * power - exponents
@@ -35,7 +35,7 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		negative = 1;
+negative = 1;
 		n = n * -1;
 	}
 	while (place >= 0)

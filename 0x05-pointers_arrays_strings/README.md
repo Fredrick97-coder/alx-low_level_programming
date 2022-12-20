@@ -9,3 +9,5 @@
 * 7-puts_half.c: function that prints half of a string
 * 8-print_array.c: function that prints n elements of an array of integers
 * 9-strcpy.c: function that copies the string pointed to by src, including the terminating null byte (\0)
+* 100-atoi.c: convert a string to an integer.
+* 101-keygen.c: generates random valid passwords for the program 101-crackme

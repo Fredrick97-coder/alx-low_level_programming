@@ -12,21 +12,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	if ((dest != NULL) && (src != NULL))
+	char *desc = dest;
+
+	while (*desc != '\0')
 	{
-		char *desc = dest;
-
-		while (*desc != '\0')
-		{
-			desc++;
-		}
-		while (*src != '\0')
-		{
-			*desc++ = *src++;
-		}
-		*desc = ('\0');
-
-		return (*dest);
+		desc++;
 	}
-	return ("NULL");
+	while (*src != '\0')
+	{
+		*desc++ = *src++;
+	}
+	*desc = ('\0');
+
+	return (dest);
 }

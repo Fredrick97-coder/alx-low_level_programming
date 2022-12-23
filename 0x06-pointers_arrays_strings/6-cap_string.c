@@ -18,7 +18,7 @@ char *cap_string(char *s)
 		{
 			if (i == 0)
 				s[i] -= 32;
-			else if (s[praev] >= 9 && s[prev] <= 41)
+			else if (s[prev] >= 9 && s[prev] <= 41)
 				s[i] -= 32;
 			else if (s[prev] == 46)
 				s[i] -= 32;

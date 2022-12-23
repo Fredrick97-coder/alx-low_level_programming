@@ -14,7 +14,7 @@ char *leet(char *s)
 	char num[] = { 4, 3, 0, 7, 1 };
 	char *res = s;
 
-	while (*res != '\0')
+	while (*res)
 	{
 		for (i = 0; i < 5; i++)
 		{

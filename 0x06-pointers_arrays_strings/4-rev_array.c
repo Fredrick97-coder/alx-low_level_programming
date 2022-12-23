@@ -23,5 +23,7 @@ void reverse_array(int *a, int n)
 		right = a[i];
 		a[i] = left;
 		a[n - i] = right;
+
+		i++;
 	}
 }

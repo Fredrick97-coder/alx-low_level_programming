@@ -13,7 +13,7 @@ char *leet(char *s)
 	char num[] = { 4, 3, 0, 7, 1 };
 	int i = 0;
 
-	while (*res)
+	while (*res != '\0')
 	{
 		for (i = 0; i < 5; i++)
 		{

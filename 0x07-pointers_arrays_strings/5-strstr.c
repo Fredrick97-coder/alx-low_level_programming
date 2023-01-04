@@ -9,7 +9,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, slen, flag;
+	int i, j, flag, slen;
 
 	i = 0;
 	j = 0;
@@ -20,15 +20,15 @@ char *_strstr(char *haystack, char *needle)
 	{
 		slen++;
 	}
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (; haystack[i] != '\0'; i++)
 	{
-		for (j = 0; j < slen && haystack[i] == needle[j]; j++, i++)
+		for (; j < slen && haystack[i] == needle[j]; j++, i++)
 		{
 			if (j == 0)
 			{
 				flag = i;
 			}
-			if (i == slen - 1)
+			if (j == slen - 1)
 			{
 				return (haystack + flag);
 			}

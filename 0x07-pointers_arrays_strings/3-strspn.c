@@ -30,9 +30,8 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 	}
-	if ( prev == count)
+	if (prev == count)
 		break;
 
 	return (count);
-	
 }

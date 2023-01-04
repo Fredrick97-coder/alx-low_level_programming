@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 		slen++;
 	}
-	for (; haystack[i] != '\0'; i++)
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		for (j = 0; j < slen && haystack[i] == needle[j]; j++, i++)
 		{

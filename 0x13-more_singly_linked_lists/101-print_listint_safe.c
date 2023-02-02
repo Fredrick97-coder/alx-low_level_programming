@@ -1,78 +1,33 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
- * add_nodeaddress - Add a node to a list with
- * @head: Pointer to the pointer of the start of the list
- * @address: The address of another list's node
- *
- * Return: Address of new node, NULL if it fails
- */
-listadd_t *add_nodeaddress(listadd_t **head, const listint_t *address)
-{
-	listadd_t *new;
-
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-	{
-		free_listadd(*head);
-		exit(98);
-	}
-	new->address = (void *)address;
-	new->next = *head;
-	*head = new;
-	return (new);
-}
-
-/**
- * free_listadd - Free a list
- * @head: Pointer to the start of the list
- */
-void free_listadd(listadd_t *head)
-{
-	listadd_t *killnode;
-
-	while (head != NULL)
-	{
-		killnode = head;
-		head = head->next;
-		free(killnode);
-	}
-}
-
-/**
- * print_listint_safe - Print out a given list, but only once if it loops
- * @head: Pointer to the start of the list
- *
- * Return: Number of nodes, if it fails print 98
+ * print_listint_safe - print list
+ * @head: head node
+ * Return: amount of nodes in list
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	listadd_t *newhead;
-	listadd_t *checker;
-	unsigned int count;
+	int size = 0, i;
+	const listint_t *tmp[100];
 
-	count = 0;
-	newhead = NULL;
-	while (head != NULL)
+	if (!head)
+		exit(98);
+
+	while (head)
 	{
-		checker = newhead;
-		while (checker != NULL)
+		for (i = 0; i < size; i++)
 		{
-			if (head == checker->address)
+			if (tmp[i] == head)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				free_listadd(newhead);
-				return (count);
+				return (size);
 			}
-			checker = checker->next;
 		}
 		printf("[%p] %d\n", (void *)head, head->n);
-		add_nodeaddress(&newhead, head);
+		tmp[size] = head;
+		size++;
 		head = head->next;
-		count++;
 	}
-	free_listadd(newhead);
-	return (count);
+	return (size);
 }

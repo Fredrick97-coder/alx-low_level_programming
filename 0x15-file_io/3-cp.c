@@ -54,14 +54,14 @@ int main(int argc, char *argv[])
 /**
  * close_file - close a opened file
  * @FD: file descriptor.
-OAOAOAOAOAOAOAOAOAOAOA *
+ *
  * Return_ nothing.
  */
 void close_file(int FD)
 {
-OAOAOAOAOA	if (close(FD) == -1)
+	if (close(FD) == -1)
 	{
-OAOAOA		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", FD);
-OAOAOAOA		exit(100);
-OAOAOA	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", FD);
+		exit(100);
+	}
 }
